@@ -359,6 +359,34 @@
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
   }
+
+  /* whatsapp style */
+  .whatsapp_main {
+      position: fixed;
+      bottom: 90px; /* Position whatsapp from bottom*/
+      right: 20px;
+      z-index: 1000; /* Ensure it's above other elements */
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+  .whatsapp_img {
+    width: 50px; /* Fixed size  */
+    height: 50px;
+    /* border-radius: 50%;a */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: all 0.3s ease;
+  }
+    
+  .whatsapp_img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatsapp_main.active {
+    opacity: 1;
+    visibility: visible;
+  }
   
   /* Footer */
   footer {
@@ -367,7 +395,7 @@
     padding: 30px 0;
     text-align: center;
   }
-  
+
   /* Animations */
   @keyframes fadeIn {
     from {
@@ -455,7 +483,23 @@
     #services ul {
       gap: 20px;
     }
+
+    .whatsapp_main {
+      bottom: 90px; /* Slightly adjust for mobile */
+      right: 15px;
+      }
+      
+    .whatsapp_img {
+      width: 45px; /* Slightly smaller on mobile */
+      height: 45px;
+      }
+      
+    .scroll-to-top {
+      bottom: 15px;
+      right: 15px;
+    }
   }
+    
   
   @media screen and (max-width: 480px) {
     h1 {
@@ -483,25 +527,7 @@
     }
   }
 
-  .whatsapp_main {
-      position: fixed;
-      bottom: 90px; /* Position above scroll button */
-      right: 20px;
-      z-index: 1000; /* Ensure it's above other elements */
-    }
-    
-    .whatsapp_img {
-      width: 50px; /* Fixed size  */
-      height: 50px;
-      border-radius: 50%;
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-      transition: all 0.3s ease;
-    }
-    
-    .whatsapp_img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
+  
   
   /* Scroll to Top Button */
   .scroll-top {
@@ -533,62 +559,3 @@
     background-color: var(--dark-color);
     transform: translateY(-5px);
   }
-  
-  /* AOS Initialization Script (add to your HTML before closing body tag) */
-  /* 
-  <script>
-    // Initialize AOS
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add scroll class to nav when scrolled
-      const nav = document.querySelector('nav');
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      });
-  
-      // Animate elements with data-aos attribute
-      const animateElements = document.querySelectorAll('[data-aos]');
-      const observerOptions = {
-        root: null,
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-      };
-  
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('aos-animate');
-          }
-        });
-      }, observerOptions);
-  
-      animateElements.forEach(el => {
-        observer.observe(el);
-      });
-  
-      // Scroll to top button
-      const scrollTopBtn = document.createElement('div');
-      scrollTopBtn.className = 'scroll-top';
-      scrollTopBtn.innerHTML = '↑';
-      document.body.appendChild(scrollTopBtn);
-  
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 500) {
-          scrollTopBtn.classList.add('active');
-        } else {
-          scrollTopBtn.classList.remove('active');
-        }
-      });
-  
-      scrollTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-  */
