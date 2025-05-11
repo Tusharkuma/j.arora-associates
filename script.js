@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show WhatsApp icon when contact section is visible in viewport
         // or when user is very close to bottom of page
         if (
-          // When contact section is visible or almost visible
+          // When contact section is at end or almost finished
           contactRect.bottom <= window.innerHeight * 0.9 ||
           // When almost at bottom of page
           (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200
