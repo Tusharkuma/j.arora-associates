@@ -482,6 +482,26 @@
       padding: 20px;
     }
   }
+
+  .whatsapp_main {
+      position: fixed;
+      bottom: 80px; /* Position above scroll button */
+      right: 20px;
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+    
+    .whatsapp_img {
+      width: 50px; /* Fixed size  */
+      height: 50px;
+      border-radius: 50%;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp_img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
   
   /* Scroll to Top Button */
   .scroll-top {

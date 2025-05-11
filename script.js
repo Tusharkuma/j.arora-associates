@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY > 100) {
       nav.classList.add("scrolled");
     } else {
-      nav.classList.remove("scrolled");
+      nav.classList.remove("scrolled");a
     }
   });
 
