@@ -485,7 +485,7 @@
 
   .whatsapp_main {
       position: fixed;
-      bottom: 80px; /* Position above scroll button */
+      bottom: 90px; /* Position above scroll button */
       right: 20px;
       z-index: 1000; /* Ensure it's above other elements */
     }
