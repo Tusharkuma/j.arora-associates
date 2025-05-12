@@ -301,11 +301,12 @@
   }
   
   #contact h2 {
-    text-align: center;
+    left: 45%;
     margin-bottom: 3rem;
   }
   
   #contact form {
+    text-align: left;
     max-width: 600px;
     margin: 0 auto 50px;
     padding: 30px;
