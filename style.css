@@ -301,7 +301,7 @@
   }
   
   #contact h2 {
-    left: 35%;
+    left: 45%;
     margin-bottom: 3rem;
   }
   
@@ -485,6 +485,11 @@
       gap: 20px;
     }
 
+    #contact h2 {
+      left: 35%;
+      margin-bottom: 3rem;
+    }
+      
     .whatsapp_main {
       bottom: 90px; /* Slightly adjust for mobile */
       right: 15px;
